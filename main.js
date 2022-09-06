@@ -50,12 +50,12 @@ fetch(imgUrl, {method: 'GET'})
 
   fetch(breedUrl, {method: 'GET'})
      .then(resp) => resp.json())
-     .then(breedData)=>{
+     .then(breedData) => {
         allBreeds=Object.keys(breedData.message)
         console.log(allBreeds)
         dogBreedUl.innerHTML = createDogList(allBreeds)
 
-     })
+     }
    function createDogList(dogBreedArray) {
     const dogLiStringArray = dogBreedArray.map(function(breed) {
         return `<li>${breed}</li>`
